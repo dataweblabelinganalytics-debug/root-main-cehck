@@ -3,6 +3,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+DEFAULT_DATABASE_URL = (
+    'sqlite:////tmp/kendrix.db'
+    if os.environ.get('VERCEL')
+    else 'sqlite:///dev.db'
+)
+
 class BaseConfig:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'default-secret-key-for-dev')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -12,11 +18,11 @@ class BaseConfig:
 
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///dev.db')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', DEFAULT_DATABASE_URL)
 
 class ProductionConfig(BaseConfig):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', DEFAULT_DATABASE_URL)
     PROPAGATE_EXCEPTIONS = False
 
 class TestingConfig(BaseConfig):

@@ -16,6 +16,12 @@ def create_app(config_name=None):
     migrate.init_app(app, db)
     ma.init_app(app)
     limiter.init_app(app)
+
+    # Vercel functions can only write to /tmp. When no managed DATABASE_URL is
+    # configured, create the schema in the ephemeral SQLite fallback.
+    if os.environ.get('VERCEL') and app.config['SQLALCHEMY_DATABASE_URI'].startswith('sqlite:'):
+        with app.app_context():
+            db.create_all()
     
     # Configure CORS
     CORS(app, origins=[app.config['FRONTEND_URL']])
