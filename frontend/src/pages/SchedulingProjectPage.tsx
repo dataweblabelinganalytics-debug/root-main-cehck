@@ -85,9 +85,19 @@ export default function SchedulingProjectPage() {
               <p className="text-lg md:text-xl text-[#64748B] max-w-3xl mb-8">
                 Kendrix Scheduling Software is a SaaS platform for appointment-based and queue-based service businesses. It manages bookings, appointments, walk-ins, live queue, staff, resources, customers, WhatsApp communication, notifications, analytics, reports, billing and business settings.
               </p>
-              <Button size="lg" href="/contact" className="bg-[#2563EB] hover:bg-blue-700 text-white px-8">
-                Contact Us
-              </Button>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Button size="lg" href="/contact" className="bg-[#2563EB] hover:bg-blue-700 text-white px-8">
+                  Contact Us
+                </Button>
+                <Button
+                  size="lg"
+                  href="https://nextin-steel.vercel.app/"
+                  variant="secondary"
+                  className="px-8"
+                >
+                  Login / Sign Up
+                </Button>
+              </div>
             </div>
             
             <div className="w-full max-w-5xl mx-auto">
