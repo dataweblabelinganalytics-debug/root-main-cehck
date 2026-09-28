@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" fill="none">
+  <defs>
+    <linearGradient id="kl-blue-bar" x1="120" y1="0" x2="120" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4DA3EC"/>
+      <stop offset="100%" stop-color="#1B60C4"/>
+    </linearGradient>
+    <linearGradient id="kl-orange" x1="285" y1="20" x2="265" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCBF2D"/>
+      <stop offset="45%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#E06E18"/>
+    </linearGradient>
+    <linearGradient id="kl-cyan" x1="60" y1="290" x2="310" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1B60C4"/>
+      <stop offset="50%" stop-color="#2E94E0"/>
+      <stop offset="100%" stop-color="#4DC8F8"/>
+    </linearGradient>
+    <linearGradient id="kl-navy" x1="170" y1="230" x2="350" y2="385" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1B4FA0"/>
+      <stop offset="100%" stop-color="#0B2550"/>
+    </linearGradient>
+  </defs>
+  <!-- K Mark -->
+  <path d="M68 28 C68 12.5 80.5 0 96 0 L152 0 C167.5 0 180 12.5 180 28 L180 200 C155 218 115 242 68 270 Z" fill="url(#kl-blue-bar)"/>
+  <path d="M232 205 C240 145 268 72 328 16 C348 2 354 18 344 58 C330 112 308 168 290 205 Z" fill="url(#kl-orange)"/>
+  <path d="M68 270 C108 250 152 228 180 212 C198 204 218 200 232 205 L290 205 C262 218 205 242 160 258 L132 266 L68 298 Z" fill="url(#kl-cyan)"/>
+  <path d="M68 298 L68 388 L132 354 L132 266 Z" fill="url(#kl-blue-bar)" opacity="0.88"/>
+  <path d="M132 266 L160 258 L338 388 C346 396 340 406 328 406 L308 406 C298 406 290 400 285 392 L180 278 L132 308 Z" fill="url(#kl-navy)"/>
+  <!-- Kendrix Wordmark -->
+  <text x="200" y="490" text-anchor="middle" font-family="'Plus Jakarta Sans','Inter','Segoe UI',sans-serif" font-weight="800" font-size="78" fill="#061B3A" letter-spacing="-1">Kendrix</text>
+</svg>
